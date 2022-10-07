@@ -140,12 +140,12 @@ public class Archivio {
 				System.out.println("---- Titolo ----");
 				String titolo = scanner.nextLine();
 				System.out.println("---- Anno di pubblicazione ----");
-				Integer annoPubblicazione = Integer.parseInt(scanner.nextLine());
+				Integer annoPubblicazione2 = Integer.parseInt(scanner.nextLine());
 				System.out.println("---- Numero di pagine ----");
-				Integer numeroPagine = Integer.parseInt(scanner.nextLine());
+				Integer numeroPagine2 = Integer.parseInt(scanner.nextLine());
 				System.out.println("---- Periodicità ----");
 				setPeriodicità();
-				Oggetto obj = new Riviste(titolo, annoPubblicazione, numeroPagine, periodicità);
+				Oggetto obj = new Riviste(titolo, annoPubblicazione2, numeroPagine2, periodicità);
 				oList.add(obj);
 				System.out.println("Rivista inserita con successo!");
 				System.out.println(oList.toString());
@@ -241,8 +241,8 @@ public class Archivio {
 
 //		List<Libri> oListStreamAuthor = oList.stream().filter(searchBook).map(oL -> (Libri) oL).filter(searchAuthor).collect(Collectors.toList());
 		
-		List<Oggetto> oListStreamAuthor = oList.stream().filter(oL -> oL instanceof Libri).map(oL -> (Libri) oL).filter((oL -> oL.getNome() == autore)).collect(Collectors.toList());
-
+		List<Oggetto> oListStreamAuthor = oList.stream().filter(oL -> oL instanceof Libri).filter((oL -> ((Libri)oL).getNome() == autore)).collect(Collectors.toList());
+		
 		System.out.println(oListStreamAuthor.toString());
 	}
 
