@@ -1,0 +1,1 @@
+[Rivista = { Periodicità: MENSILE CodiceISBN: 1, Titolo: asdf, Anno di pubblicazione: 100, Numero di pagine: 213 }, Libro = { Autore: pinos, Genere: FANTASY CodiceISBN: 2, Titolo: fiasd, Anno di pubblicazione: 101, Numero di pagine: 32 }]
