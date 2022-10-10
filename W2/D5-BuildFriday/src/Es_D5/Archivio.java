@@ -241,7 +241,7 @@ public class Archivio {
 
 //		List<Libri> oListStreamAuthor = oList.stream().filter(searchBook).map(oL -> (Libri) oL).filter(searchAuthor).collect(Collectors.toList());
 		
-		List<Oggetto> oListStreamAuthor = oList.stream().filter(oL -> oL instanceof Libri).filter((oL -> ((Libri)oL).getNome() == autore)).collect(Collectors.toList());
+		List<Oggetto> oListStreamAuthor = oList.stream().filter(oL -> oL instanceof Libri).filter((oL -> ((Libri)oL).getNome().equals(autore))).collect(Collectors.toList());
 		
 		System.out.println(oListStreamAuthor.toString());
 	}
